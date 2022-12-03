@@ -1,4 +1,4 @@
-name: deploy to Github Pages
+name: deploy
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         run: |
           yarn
           yarn build
-          yarn export
+          next export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
